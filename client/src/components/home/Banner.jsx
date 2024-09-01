@@ -6,10 +6,14 @@ import {styled} from '@mui/material';
 
 import { bannerData } from '../../constants/data';
 
-const Image = styled('img')({
+const Image = styled('img')(({theme})=> ({
     width: '100%' , 
-    height: 280
-})
+    height: 280,
+    [theme.breakpoints.down('md')]: {
+        objectFit: 'cover',
+        height: 180
+    }
+}));
 
 const responsive = {
     desktop: {
@@ -29,9 +33,9 @@ const responsive = {
 const Banner = () => {
     return (
         <Carousel
+            responsive = {responsive}
             swipeable={false}
             draggable={false}
-            responsive ={responsive}
             infinite={true}
             autoPlay={true}
             autoPlaySpeed={4000}
