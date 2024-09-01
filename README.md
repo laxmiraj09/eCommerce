@@ -1,2 +1,4 @@
 # eCommerce
-MERN stack eCommerce website (clone)
+Flipkart Clone 
+Front-end - React.js
+Backend - Node, Express, MongoDB | Redux & Paytm Payment
